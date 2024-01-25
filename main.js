@@ -27,12 +27,12 @@ const controls = new OrbitControls(camera,renderer.domElement);
 
 //BACKGROUND TEXTURES
 const cubeTextures =[
-	'px.jpg',
-	'nx.jpg',
-	'py.jpg',
-	'ny.jpg',
-	'pz.jpg',
-	'nz.jpg'
+	'Assests/px.jpg',
+	'Assests/nx.jpg',
+	'Assests/py.jpg',
+	'Assests/ny.jpg',
+	'Assests/pz.jpg',
+	'Assests/nz.jpg'
 ]
 
 const enviroment = new THREE.CubeTextureLoader().load(cubeTextures);
