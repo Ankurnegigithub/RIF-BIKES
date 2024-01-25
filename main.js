@@ -43,7 +43,7 @@ scene.background = enviroment;
 //3D MODEL LOAD
 const loader = new GLTFLoader();
 let phone;
-loader.load('./Assests/bicycle_m..glb', ( gltf ) =>{
+loader.load('./Assests/rif.glb', ( gltf ) =>{
 	phone = gltf.scene;
 if(phone){
 	phone.position.set(0,-8,0);
