@@ -1,8 +1,14 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
  import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import Imge1 from './Assests/px.jpg';
+ import Imge2 from './Assests/nx.jpg';
+import Imge3 from './Assests/py.jpg';
+import Imge4 from './Assests/ny.jpg';
+import Imge5 from './Assests/pz.jpg';
+import Imge6 from './Assests/nz.jpg';
+import model from 'rif.glb';
 
- 
  let index = 0;
 const scene = new THREE.Scene();
 
@@ -27,12 +33,12 @@ const controls = new OrbitControls(camera,renderer.domElement);
 
 //BACKGROUND TEXTURES
 const cubeTextures =[
-	'Assests/px.jpg',
-	'Assests/nx.png',
-	'Assests/py.jpg',
-	'Assests/ny.jpg',
-	'Assests/pz.jpg',
-	'Assests/nz.jpg'
+	Imge1,
+	Imge2,
+	Imge3',
+	Imge4,
+	Imge5,
+	Imge6
 ]
 
 const enviroment = new THREE.CubeTextureLoader().load(cubeTextures);
@@ -43,7 +49,7 @@ scene.background = enviroment;
 //3D MODEL LOAD
 const loader = new GLTFLoader();
 let phone;
-loader.load('rif.glb', ( gltf ) =>{
+loader.load(model, ( gltf ) =>{
 	phone = gltf.scene;
 if(phone){
 	phone.position.set(0,-8,0);
