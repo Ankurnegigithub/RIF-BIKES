@@ -35,7 +35,7 @@ const controls = new OrbitControls(camera,renderer.domElement);
 const cubeTextures =[
 	Imge1,
 	Imge2,
-	Imge3',
+	Imge3,
 	Imge4,
 	Imge5,
 	Imge6
