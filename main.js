@@ -28,7 +28,7 @@ const controls = new OrbitControls(camera,renderer.domElement);
 //BACKGROUND TEXTURES
 const cubeTextures =[
 	'Assests/px.jpg',
-	'Assests/nx.jpg',
+	'Assests/nx.png',
 	'Assests/py.jpg',
 	'Assests/ny.jpg',
 	'Assests/pz.jpg',
