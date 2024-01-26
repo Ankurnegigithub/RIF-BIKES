@@ -305,16 +305,17 @@ color: white;
 .menu {
   position: absolute;
   top: 0;
-  margin-top: 50px;
+  margin-top: 80px;
   left: 0;
   flex-direction: column;
   width: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 4;
+ 
+ 
 }
 #menu-toggle ~ .menu li {
-  height: 0;
+  height:0;
   margin: 0;
   padding: 0;
   border: 0;
@@ -325,6 +326,7 @@ color: white;
   height: 2.5em;
   padding: 0.5em;
   transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+
 }
 .menu > li {
   display: flex;
@@ -336,6 +338,6 @@ color: white;
   background-color: #222;
 }
 .menu > li:not(:last-child) {
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #000000;
 }
 }
