@@ -16,10 +16,6 @@ meta{
   -webkit-tap-highlight-color: transparent;
 
 }
-html, body {
-margin: 0;
-height: 100%;
-}
 
 .top-nav {
 display: flex;
@@ -29,7 +25,7 @@ justify-content: space-between;
 background-color: #00BAF0;
 background: black;
 color: #FFF;
-height: 10svh;
+height: 10vh;
 padding: 1em;
 position: fixed;
 overflow: hidden;
@@ -38,77 +34,104 @@ width: 100%;
 }
 .container .top-nav #circle-it{
 padding-left: 6rem;
+z-index: 4;
 }
-.menu {
-display: flex;
-flex-direction: row;
-list-style-type: none;
-margin: 0;
-padding: 0;
-cursor: pointer;
-}
-
-.menu > li {
-margin: 0 1rem;
-overflow: hidden;
-}
-
-.menu-button-container {
-display: none;
-height: 100%;
-width: 30px;
-cursor: pointer;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-
+label .menu {
+  position: absolute;
+  right: -100px;
+  top: -74px;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  background: #000000;
+  border-radius: 50% 50% 50% 50%;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  box-shadow: 0 0 0 0 #000000, 0 0 0 0 #000000;
+  cursor: pointer;
+  
 }
 
-#menu-toggle {
-display: none;
+label .hamburger {
+  position: absolute;
+  top: 135px;
+  left: 50px;
+  width: 30px;
+  height: 2px;
+  background: rgb(255, 255, 255);
+  display: block;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
 }
 
-.menu-button,
-.menu-button::before,
-.menu-button::after {
-display: block;
-background-color: #fff;
-position: absolute;
-height: 4px;
-width: 30px;
-transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
-border-radius: 2px;
+label .hamburger:after, label .hamburger:before {
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
 }
 
-.menu-button::before {
-content: '';
-margin-top: -8px;
+label .hamburger:before { top: -10px; }
+
+label .hamburger:after { bottom: -10px; }
+
+label input { display: none; }
+
+label input:checked + .menu {
+  box-shadow: 0 0 0 100vw #7e7e7e, 0 0 0 100vh #7e7e7e;
+  border-radius: 0;
+  
 }
 
-.menu-button::after {
-content: '';
-margin-top: 8px;
+label input:checked + .menu .hamburger {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-margin-top: 0px;
-transform: rotate(405deg);
+label input:checked + .menu .hamburger:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  bottom: 0;
+  
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button {
-background: rgba(255, 255, 255, 0);
+label input:checked + .menu .hamburger:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 0;
+  
 }
 
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-margin-top: 0px;
-transform: rotate(-405deg);
+label input:checked + .menu + ul { opacity: 1; }
+
+label ul {
+  z-index: 4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  list-style: none;
+  margin-bottom: 1em;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  -webkit-transition: .25s 0s ease-in-out;
+  transition: .25s 0s ease-in-out;
 }
-
-
-
 
 .container #model-container{
-height:100svh;
+height:calc(100vh - 10vh);
 width: 100%;
 display: flex;
 align-items: center;
@@ -159,8 +182,9 @@ cursor: pointer;
 filter: invert(100%);
 
 }
-.container .main{
-height: 100svh;
+
+.main{
+height: 100vh;
 width: 100%;
 display: flex;
 align-items: center;
@@ -170,7 +194,7 @@ background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
-.container .main .left{
+ .main .left{
 height: 100%;
 width: 45%;
 color: white;
@@ -182,23 +206,23 @@ text-align: center;
 line-height: 2;
 }
 
-.container .main .left h1{
+.main .left h1{
 font-size: 4rem;
 font-weight: 800;
 }
-.container .main .left h2{
+ .main .left h2{
 font-size: 3rem;
 font-weight: 700;
 }
-.container .main .left h4{
+ .main .left h4{
 font-size: 2rem;
 font-weight: 600;
 }
-.container .main .left p{
+ .main .left p{
 font-size: 1rem;
 font-weight: 400;
 }
-.container .main .left button{
+.main .left button{
 box-sizing: border-box;
 border-radius: 2rem;
 text-align: center;
@@ -212,14 +236,14 @@ font-weight: 600;
 background-color: black;
 color: white;
 }
-.container .main #right{
+ .main #right{
 height: 100vh;
 width: 55%;
 align-items: center;
 
 }
 
-.container .main #right img{
+.main #right img{
  height: 100%;
  width: 100%;
  object-fit: contain;
@@ -238,8 +262,8 @@ opacity:.5;
 to { opacity:1; }
 }
 
-.container .about{
-height: 100svh;
+ .about{
+height: 100vh;
 width: 100%;
 background: url(bike4.png);
 background-position: center;
@@ -252,36 +276,36 @@ align-items: center;
 justify-content: center;
 line-height: 1.5;
 }
-.container .about h1{
+.about h1{
   text-align: center;
 font-size: 4rem;
 font-weight: 800;
 
 }
-.container .about h3{
+ .about h3{
   text-align: center;
 font-size: 3rem;
 font-weight: 600;
 }
-.container .about p{
+.about p{
   text-align: center;
 font-size: 2rem;
 font-weight: 400;
 }
-.container .about h4{
+ .about h4{
   text-align: center;
 font-size: 2rem;
 font-weight: 400;
 }
 
 
-.container .contact {
-height: 100svh;
+ .contact {
+height: 100vh;
 width: 100%;
 background-color: black;
 color: white;
 }
-.container .middle{
+ .middle{
 height: 100%;
 width: 100%;
 background: url(bike3.png)  no-repeat;
@@ -294,7 +318,7 @@ align-items: center;
 text-align: center;
 line-height: 1.2;
 } 
-.container .contact .middle{
+.contact .middle{
 display: flex;
 justify-content: center;
 align-items: center;
@@ -302,19 +326,19 @@ flex-direction: column;
 color: white;
 }
 
-.container .contact .middle h1{
+ .contact .middle h1{
   font-size: 4rem;
   font-weight: 800;
 }
-container .contact .middle h2{
+ .contact .middle h2{
   font-size: 3rem;
   font-weight: 700;
 }
-container .contact .middle p{
+ .contact .middle p{
   font-size: 3rem;
   font-weight: 600;
 }
-.container .contact .middle #svgs{
+ .contact .middle #svgs{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -322,7 +346,7 @@ container .contact .middle p{
     
 }
 
-.container .contact .middle #svgs svg{
+ .contact .middle #svgs svg{
 height: 20px;
 width: 20px;
 }
@@ -330,153 +354,108 @@ width: 20px;
 /* MEDIA QUERIES */
 
 @media (max-width: 720px) {
-.menu-button-container {
-  display: flex;
-  z-index: 4;
-}
-.menu {
-  
-  position: absolute;
-  top: 2.2rem;
-  
-  margin-top: 50px;
- padding-right: 20px;
-  left: 0;
-  flex-direction: column;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
- 
- 
-}
-#menu-toggle ~ .menu li {
-  height:0;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
- 
-}
-#menu-toggle:checked ~ .menu li {
-  border: 1px solid #333;
-  height: 2.5em;
-  width: 100%;
-  padding: 0.5em;
-  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
-  z-index: 7;
-}
-.menu > li {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 0.5em 0;
-  width: 100%;
-  color: white;
-  background-color: #222;
-}
-.menu > li:not(:last-child) {
-  border-bottom: 1px solid #000000;
-}
 
-.container .main{
+ .main{
 height: 100%;
 width: 100vw;
 flex-direction: column;
 }
 
-.container .main .left{
+ .main .left{
   line-height: 1.5;
 }
-.container .main .left h1{
+r .main .left h1{
   font-size: 3rem;
 
 }
-.container .main .left p{
+.main .left p{
   font-size: 1.5rem;
 }
-.container .main .right{
+ .main .right{
   height: 100%;
   width: 55vw;
 }
-.container .main .right img{
+ .main .right img{
   object-fit: contain;
 }
 
-.container .about{
+ .about{
   line-height: 1.2;
 }
-.container .about h1{
+ .about h1{
   font-size: 3rem;
   font-weight: 800;
   
   }
-  .container .about h3{
+ .about h3{
   font-size: 2rem;
   font-weight: 600;
   }
-  .container .about p{
+   .about p{
   font-size: 1.5rem;
   font-weight: 400;
   }
-  .container .about h4{
+  .about h4{
   font-size: 2rem;
   font-weight: 400;
   }
 
-  .container .contact .middle{
+  .contact .middle{
     line-height: 1;
   }
-  container .contact .middle h1{
+   .contact .middle h1{
     font-size: 3rem;
     font-weight: 800;
   }
-  container .contact .middle h1{
+   .contact .middle h1{
     font-size: 2rem;
     font-weight: 800;
   }
-  container .contact .middle p{
+   .contact .middle p{
     font-size: 2rem;
     font-weight: 600;
   }
 }
 
+
+
 @media (max-width: 500px){
-  .container .main .left h1{
+   .main .left h1{
     font-size: 2rem;
   }
-  .container .main .left h1{
+  .main .left h1{
     font-size: 1rem;
   }
-  .container .main .left p{
+.main .left p{
     font-size: 1rem;
   }
 
-  .container .about h1{
+  .about h1{
     font-size: 2rem;
     font-weight: 800;
     
     }
-    .container .about h3{
+  .about h3{
     font-size: 1.5rem;
     font-weight: 600;
     }
-    .container .about p{
+    .about p{
     font-size: 1.2rem;
     font-weight: 400;
     }
-    .container .about h4{
+   .about h4{
     font-size: 2rem;
     font-weight: 400;
     }
-    container .contact .middle h1{
+    .contact .middle h1{
       font-size: 2rem;
       font-weight: 800;
     }
-    container .contact .middle h1{
+    .contact .middle h1{
       font-size: 1.5rem;
       font-weight: 800;
     }
-    container .contact .middle p{
+    .contact .middle p{
       font-size: 1rem;
       font-weight: 600;
     }
