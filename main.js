@@ -159,6 +159,8 @@ function displayimages(){
 }
 
 
+
+
 //GSAP
 document.addEventListener('DOMContentLoaded', ()=>{
 gsap.timeline()
