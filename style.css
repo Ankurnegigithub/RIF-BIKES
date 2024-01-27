@@ -161,6 +161,7 @@ width: 100%;
 display: flex;
 align-items: center;
 background: url(Background1.png);
+background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -237,6 +238,7 @@ to { opacity:1; }
 height: 100vh;
 width: 100%;
 background: url(bike4.png);
+background-position: center;
 background-repeat: no-repeat;
 background-color: black;
 color: white;
@@ -264,6 +266,7 @@ font-size: 2rem;
 font-weight: 400;
 }
 
+
 .container .contact {
 height: 100vh;
 width: 100%;
@@ -271,10 +274,11 @@ background-color: black;
 color: white;
 }
 .container .middle{
-height: 100vh;
+height: 100%;
 width: 100%;
 background: url(bike3.png)  no-repeat;
 background-size: cover;
+background-position: center;
 display: flex;
 justify-content: center;
 flex-direction: column;
