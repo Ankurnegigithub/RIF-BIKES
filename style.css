@@ -10,7 +10,7 @@ meta{
   content: width=device-width, initial-scale=1.0;
 }
 .container{
-  height: 100svh;
+  height: 100vh;
   width: 100%;
   position: relative;
   -webkit-tap-highlight-color: transparent;
@@ -39,7 +39,7 @@ z-index: 4;
 label .menu {
   position: absolute;
   right: -100px;
-  top: -74px;
+  top: -100px;
   z-index: 1;
   width: 200px;
   height: 200px;
@@ -84,7 +84,7 @@ label .hamburger:after { bottom: -10px; }
 label input { display: none; }
 
 label input:checked + .menu {
-  box-shadow: 0 0 0 100vw #7e7e7e, 0 0 0 100vh #7e7e7e;
+  box-shadow: 0 0 0 100vw #000000, 0 0 0 100vh #000000;
   border-radius: 0;
   
 }
@@ -131,7 +131,7 @@ label ul {
 }
 
 .container #model-container{
-height:calc(100vh - 10vh);
+height:100vh;
 width: 100%;
 display: flex;
 align-items: center;
@@ -304,38 +304,40 @@ height: 100vh;
 width: 100%;
 background-color: black;
 color: white;
+
 }
- .middle{
+.contact .middle{
 height: 100%;
 width: 100%;
-background: url(bike3.png)  no-repeat;
-background-size: cover;
-background-position: center;
 display: flex;
 justify-content: center;
 flex-direction: column;
 align-items: center;
 text-align: center;
 line-height: 1.2;
+background: url(bike3.png)  no-repeat;
+background-size: cover;
+background-position: center;
 } 
 .contact .middle{
 display: flex;
 justify-content: center;
-align-items: center;
 flex-direction: column;
+align-items: center;
+text-align: center;
 color: white;
 }
 
  .contact .middle h1{
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
 }
  .contact .middle h2{
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
 }
  .contact .middle p{
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
  .contact .middle #svgs{
@@ -376,7 +378,8 @@ r .main .left h1{
   width: 55vw;
 }
  .main .right img{
-  object-fit: contain;
+ min-width: 100%;
+ display: block;
 }
 
  .about{

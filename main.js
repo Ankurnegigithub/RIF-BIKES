@@ -57,7 +57,7 @@ scene.add(phone);
 render();
 } );
 
- }
+ };
 //LIGHT SOURCES
 const ambientLight = new THREE.AmbientLight(0xffffff,0.5);
 scene.add(ambientLight);
@@ -107,8 +107,6 @@ const animate =()=>{
   
 requestAnimationFrame(animate);
 controls.update();
-controls.enablePan = false;
-			controls.enableDamping = true;
 renderer.render(scene,camera);
 };
 
