@@ -27,19 +27,15 @@
    
 
   <div class="container" id="Contain1">
-    <section class="top-nav">
-      <h1 id="circle-it">RIF-BIKES</h1>
-      <label>
-        <input type="checkbox">
-        <span class="menu"> <span class="hamburger"></span> </span>
-        <ul>
-          <li onclick="window.location='#Contain1'" value="Redirect To Div"> Home</li>
-          <li onclick="window.location='#Main1'" value="Redirect To Div"> Bikes </li>
-          <li onclick="window.location='#About1'" value="Redirect To Div"> About </li>
-          <li onclick="window.location='#Contact1'" value="Redirect To Div"> Contact </li>
-        </ul>
-        </label>
-     </section>
+    <div class="topnav" id="myTopnav">
+      <a href="#home" class="active" id="circle-it">Home</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <div id="model-container" >
      <div class="line">
       <h1>Burn Fat Not Oil</h1>
@@ -108,7 +104,17 @@ Saturday mornings by appointment
     </div>
   <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
+    
 
     <script type="module" src="main.js"></script>
 </body>
