@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
  
  
  let index = 0;
- let scene,camera,renderer,controls,enviroment,phone,loader;
+ let scene,camera,renderer,controls,enviroment,bike,loader;
  init();
 
  function init(){
@@ -20,8 +20,6 @@ camera.lookAt(new THREE.Vector3(0,-8,0));
 //RENDERER 
  renderer = new THREE.WebGLRenderer({antialias: true});
 renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.shadowMap.enabled = true;
-renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
 document.querySelector('#model-container').append( renderer.domElement );
 
@@ -45,15 +43,15 @@ scene.background = enviroment;
 //3D MODEL LOAD
  loader = new GLTFLoader(); 
 loader.load('BikeModel.glb', ( gltf ) =>{
-	phone = gltf.scene;
-if(phone){
-	phone.position.set(0,-8,0);
-	phone.castShadow = true;
-	phone.receiveShadow = true;
-	phone.scale.set(1,1,1);
+	bike = gltf.scene;
+if(bike){
+	bike.position.set(0,-8,0);
+	bike.castShadow = true;
+	bike.receiveShadow = true;
+	bike.scale.set(1,1,1);
 	
 }	
-scene.add(phone);
+scene.add(bike);
 render();
 } );
 
@@ -89,9 +87,9 @@ function resetModel() {
    camera.position.set(0,-8,10);
 camera.lookAt(new THREE.Vector3(0,-8,10));
 
-   phone.position.set(0,-8,0);
-   phone.castShadow = true;
-	phone.receiveShadow = true; // Adjust as needed
+   bike.position.set(0,-8,0);
+   bike.castShadow = true;
+	bike.receiveShadow = true; // Adjust as needed
 }
 
 let idleTimer;
@@ -126,9 +124,7 @@ window.addEventListener('resize', ()=>{
 
 
     function render() {
-
         renderer.render( scene, camera );
-
     }
 
 	
@@ -153,31 +149,16 @@ function displayimages(){
     setTimeout (displayimages , 2000);
 }
 
+//MENU TOGGLE
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
 
 
 
-//GSAP
-// document.addEventListener('DOMContentLoaded', ()=>{
-// gsap.timeline()
-// .from("#circle-it",{
-//     opacity:0,
-//     duration:1,
-//     ease:"power2.inOut"
-// })
-// .to("#circle-it",{
-//     rotation:360,
-//     duration:1,
-//     ease:"power2.inOut"
-// })
-// .to("#circle-it",{
-//     opacity:0,
-//     duration:1,
-//     ease:"power2.inOut"
-// })
-// .to("#circle-it",{
-//     rotation:0,
-//     opacity:1,
-//     duration:1,
-//     ease:"power2.inOut"
-// });
-// });
+
