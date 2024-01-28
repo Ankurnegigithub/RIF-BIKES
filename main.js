@@ -131,10 +131,7 @@ window.addEventListener('resize', ()=>{
 
     }
 
-	//TEXT CIRCLING
-	new CircleType(document.getElementById('circle-it'))
-  .radius(104);
-
+	
 
 //DISPLAY IMAGES
   displayimages();
@@ -160,27 +157,27 @@ function displayimages(){
 
 
 //GSAP
-document.addEventListener('DOMContentLoaded', ()=>{
-gsap.timeline()
-.from("#circle-it",{
-    opacity:0,
-    duration:1,
-    ease:"power2.inOut"
-})
-.to("#circle-it",{
-    rotation:360,
-    duration:1,
-    ease:"power2.inOut"
-})
-.to("#circle-it",{
-    opacity:0,
-    duration:1,
-    ease:"power2.inOut"
-})
-.to("#circle-it",{
-    rotation:0,
-    opacity:1,
-    duration:1,
-    ease:"power2.inOut"
-});
-});
+// document.addEventListener('DOMContentLoaded', ()=>{
+// gsap.timeline()
+// .from("#circle-it",{
+//     opacity:0,
+//     duration:1,
+//     ease:"power2.inOut"
+// })
+// .to("#circle-it",{
+//     rotation:360,
+//     duration:1,
+//     ease:"power2.inOut"
+// })
+// .to("#circle-it",{
+//     opacity:0,
+//     duration:1,
+//     ease:"power2.inOut"
+// })
+// .to("#circle-it",{
+//     rotation:0,
+//     opacity:1,
+//     duration:1,
+//     ease:"power2.inOut"
+// });
+// });
