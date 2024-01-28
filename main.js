@@ -4,7 +4,10 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
  
  
  let index = 0;
+ let isUserInteracting = false;
+ let idleTimer;
  let scene,camera,renderer,controls,enviroment,bike,loader;
+ 
  init();
 
  function init(){
@@ -70,35 +73,28 @@ light.shadow.camera.far = 100;
 scene.add(light);
 
 
-let isUserInteracting = false;
-
 document.addEventListener('mousemove', () => {
     isUserInteracting = true;
-
-    // Reset the timer when there is user interaction
     clearTimeout(idleTimer);
-    idleTimer = setTimeout(resetModel, 2000); // Reset after 3 seconds of inactivity
+    idleTimer = setTimeout(resetModel, 2000); 
 });
 
 function resetModel() {
     isUserInteracting = false;
-
-    // Reset camera position
    camera.position.set(0,-8,10);
 camera.lookAt(new THREE.Vector3(0,-8,10));
 
    bike.position.set(0,-8,0);
    bike.castShadow = true;
-	bike.receiveShadow = true; // Adjust as needed
+	bike.receiveShadow = true; 
 }
 
-let idleTimer;
+
 
 //ANIMATION
 const animate =()=>{
-
 	if (!isUserInteracting) {
-        // If no user interaction, reset the model after 3 seconds
+        // If no user interaction, reset the model after 2 seconds
         clearTimeout(idleTimer);
         idleTimer = setTimeout(resetModel, 2000);
     }
@@ -113,9 +109,7 @@ renderer.render(scene,camera);
 window.addEventListener('resize', ()=>{
 	camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-
 				renderer.setSize( window.innerWidth, window.innerHeight );
-
 				render();
 	
 	});
