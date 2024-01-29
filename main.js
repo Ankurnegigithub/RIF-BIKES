@@ -143,8 +143,126 @@ function displayimages(){
     setTimeout (displayimages , 2000);
 }
 
-//MENU 
+ //GSAP
+ var t1 = gsap.timeline();
+ t1
+    .from('.container .mainscreen #lowest',{
+    onStart:function(){
+        $('#lowest').textillate({
+             in: {
+                 effect: 'fadeInUp',
+                 callback:function() {
+                    $('#lowest').textillate('out')
+                 }
+                },
+            out:{ effect:'fadeOutUp'}
+            });
+    }
+})
 
+.from('#lower',{
+    opacity:1,
+    delay:1,
+    onStart:function(){
+       
+        $('#lower').textillate({
+             in: {
+                 effect: 'fadeInUp',
+                 callback:function() {
+                    $('#lower').textillate('out')
+                 }
+                },
+            out:{ effect:'fadeOutUp'}
+            });
+    }
+})
+.from(' #middle',{
+    opacity:1,
+    delay:1,
+    onStart:function(){
+       
+        $('#middle').textillate({
+             in: {
+                 effect: 'fadeInUp',
+                 callback:function() {
+                    $('#middle').textillate('out')
+                 }
+                },
+            out:{ effect:'fadeOutUp'}
+            });
+    }
+})
+.from(' #higest',{
+    opacity:1,
+    delay:1,
+    onStart:function(){
+       
+        $('#higest').textillate({
+             in: {
+                 effect: 'fadeInUp',
+                 callback:function() {
+                    $('#higest').textillate('out')
+                 }
+                },
+            out:{ effect:'fadeOutUp'}
+            });
+    }
+})
+.from(' #heading',{
+    opacity:0,
+    y:-30,
+    duration:1
+
+})
+.to('.mainscreen',{
+    top:'-100%',
+    delay:1,
+    duration:1.2,
+    ease:"Power4.easeOut"
+})
+
+// var t1 =gsap.timeline();
+// t1
+// .from('.topnav',{
+//     opacity:0,
+//    y:20,
+//     duration:1
+// })
+// .from('#Head',{
+//     opacity:0,
+//     x:-20,
+//    duration:0.5
+// })
+// .from('.up',{
+//     opacity:0,
+//     x:-30,
+//     duration:0.5
+// })
+// .from('#tog',{
+//     opacity:0,
+//     y:-20,
+//     duration:0.5
+// })
+// .from('#model-container img',{
+//     opacity:0,
+//     scale:1.5,
+//     duration:1
+// })
+// .from('.main .left h1',{
+//     opacity:0,
+//     y:30
+    
+// })
+// .from('.main .left h4',{
+//     opacity:0,
+//     x:-30
+   
+// })
+// .from('.main .left h2',{
+//     opacity:0,
+//     y:30
+
+// })
 
 
 

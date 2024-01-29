@@ -1,9 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;;
+    
 }
 
 meta{
@@ -11,6 +12,7 @@ meta{
 }
 body{
   overflow: hidden;
+  font-family: 'Rubik', sans-serif;
 }
 .container{
   min-height: 100vh;
@@ -18,6 +20,33 @@ body{
   position: relative;
   -webkit-tap-highlight-color: transparent;
 
+}
+ .container .mainscreen{
+  height: 100vh;
+  width: 100%;
+  z-index: 8;
+  position: absolute;
+  background-color: black;
+  color: white;
+  
+}
+
+.container .mainscreen #heading{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  letter-spacing :5px;
+  font-size: 4rem;
+  font-weight: 800;
+  font-family: 'Great Vibes', cursive;
+}
+ .container .right1{
+  position: absolute;
+  top: 15%;
+ right: 5%;
+  float: inline-end;
+  font-size: 4rem;
+  font-weight: 900;
 }
 
 .topnav {
@@ -54,6 +83,10 @@ body{
  display: none;
 }
 
+.topnav a #curse{
+  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+}
 
 
 .container #model-container{
@@ -299,11 +332,13 @@ font-weight: 700;
   }
 
  .main{
+  min-height: 100vh;
 flex-direction: column;
 }
 
  .main .left{
-  width: 60%;
+  height: 40%;
+  width: 100%;
   line-height: 1.2;
 margin: 6rem;
 padding: 6rem;
@@ -316,12 +351,13 @@ padding: 6rem;
   font-size: 1.5rem;
 }
  .main .right{
-  width: 40%;
+  width: 100%;
+  height: 60%;
 }
  .main #right img{
-  height: 25%;
-  width: 112%;
-  object-fit: contain;
+  height: 27%;
+  width: 100%;
+  
  
 }
 
