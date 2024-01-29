@@ -145,7 +145,8 @@ function displayimages(){
 }
 
 
-        var t1 = gsap.timeline();
+//GSAP
+        const t1 = gsap.timeline();
  t1
     .from('#lowest',{
         opacity:0,
@@ -251,7 +252,7 @@ function displayimages(){
     duration:1
 })
 
-.from('#Emtb',{
+.to('#Emtb',{
     x:30,
     opacity:1,
     duration:1,
@@ -259,29 +260,29 @@ function displayimages(){
     scrollTrigger:{
     trigger:"#Emtb",
     scroller:"body",
-    markers:true,
+  
     start:"top 80%",
     end:"bottom 10%",
-    
+    scrub:2
     }
 
 })
-.from('#h-4',{
-    y:-30,
+.to('#h-4',{
+    y:-40,
     opacity:1,
     duration:1,
 
     scrollTrigger:{
     trigger:"#h-4",
     scroller:"body",
-    markers:true,
+   
     start:"top 80%",
     end:"bottom 10%",
-    
+    scrub:2
     }
 
 })
-.from('#h-2',{
+.to('#h-2',{
     x:30,
     opacity:1,
     duration:1,
@@ -289,28 +290,28 @@ function displayimages(){
     scrollTrigger:{
     trigger:"#h-2",
     scroller:"body",
-    markers:true,
+   
     start:"top 80%",
     end:"bottom 10%",
-    
+    scrub:2
     }
 
 })
-.from('#P-1',{
+.to('#P-1',{
     y:-30,
     opacity:1,
 
     scrollTrigger:{
     trigger:"#P-2",
     scroller:"body",
-    markers:true,
+  
     start:"top 80%",
     end:"bottom 10%",
-    
+    scrub:2
     }
 
 })
-.from('#b-1',{
+.to('#b-1',{
     y:-30,
     opacity:1,
     duration:1,
@@ -318,16 +319,154 @@ function displayimages(){
     scrollTrigger:{
     trigger:"#b-1",
     scroller:"body",
-    markers:true,
+    
     start:"top 80%",
     end:"bottom 10%",
-    
+    scrub:2
     }
 
 })
 
+.to('#right',{
+    scale:1.2,
+    opacity:1,
+    duration:1,
 
+    scrollTrigger:{
+    trigger:"#right",
+    scroller:"body",
+   
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
 
+})
+
+.to('#H',{
+    x:-40,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#H",
+    scroller:"body",
+  
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+
+.to('#h-3',{
+    x:40,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#H",
+    scroller:"body",
+  
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+.to('#p-2',{
+    y:30,
+    opacity:1,
+    duration:0.5,
+
+    scrollTrigger:{
+    trigger:"#p-2",
+    scroller:"body",
+   
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+.to('#h4',{
+    y:50,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#h4",
+    scroller:"body",
+    
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+
+.to('.H-2',{
+    x:-40,
+    opacity:1,
+    duration:2,
+
+    scrollTrigger:{
+    trigger:".H-2",
+    scroller:"body",
+    
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+
+.to('.H-1',{
+    x:40,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:".H-1",
+    scroller:"body",
+
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+.to('#svgs',{
+    x:30,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#svgs",
+    scroller:"body",
+   
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
+
+.to('.PP',{
+    y:50,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:".PP",
+    scroller:"body",
+   
+    start:"top 80%",
+    end:"bottom 10%",
+    scrub:2
+    }
+
+})
 
 
  

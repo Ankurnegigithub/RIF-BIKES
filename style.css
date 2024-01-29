@@ -12,6 +12,7 @@ meta{
 }
 body{
   font-family: 'Rubik', sans-serif;
+  overflow-x: hidden;
 }
 ::-webkit-scrollbar{
   width: 1px;
