@@ -143,10 +143,16 @@ function displayimages(){
     setTimeout (displayimages , 2000);
 }
 
+//SCROLL THROUGH SECTIONS
+function StoS(sectionid){
+   document.getElementById('sectionid').style.display = "block"
+}
+
  //GSAP
+
  var t1 = gsap.timeline();
  t1
-    .from('.container .mainscreen #lowest',{
+    .from('#lowest',{
     onStart:function(){
         $('#lowest').textillate({
              in: {
@@ -161,7 +167,7 @@ function displayimages(){
 })
 
 .from('#lower',{
-    opacity:1,
+    opacity:0,
     delay:1,
     onStart:function(){
        
@@ -177,7 +183,7 @@ function displayimages(){
     }
 })
 .from(' #middle',{
-    opacity:1,
+    opacity:0,
     delay:1,
     onStart:function(){
        
@@ -193,7 +199,7 @@ function displayimages(){
     }
 })
 .from(' #higest',{
-    opacity:1,
+    opacity:0,
     delay:1,
     onStart:function(){
        
@@ -221,48 +227,32 @@ function displayimages(){
     ease:"Power4.easeOut"
 })
 
-// var t1 =gsap.timeline();
-// t1
-// .from('.topnav',{
-//     opacity:0,
-//    y:20,
-//     duration:1
-// })
-// .from('#Head',{
-//     opacity:0,
-//     x:-20,
-//    duration:0.5
-// })
-// .from('.up',{
-//     opacity:0,
-//     x:-30,
-//     duration:0.5
-// })
-// .from('#tog',{
-//     opacity:0,
-//     y:-20,
-//     duration:0.5
-// })
-// .from('#model-container img',{
-//     opacity:0,
-//     scale:1.5,
-//     duration:1
-// })
-// .from('.main .left h1',{
-//     opacity:0,
-//     y:30
-    
-// })
-// .from('.main .left h4',{
-//     opacity:0,
-//     x:-30
-   
-// })
-// .from('.main .left h2',{
-//     opacity:0,
-//     y:30
 
-// })
+.from('.topnav',{
+    opacity:0,
+   y:20,
+    duration:1
+})
+.from('#Head',{
+    opacity:0,
+    x:-20,
+   duration:0.5
+})
+.from('.up',{
+    opacity:0,
+    x:-30,
+    duration:0.5
+})
+.from('#tog',{
+    opacity:0,
+    y:-20,
+    duration:0.5
+})
+.from('#model-container img',{
+    opacity:0,
+    scale:1.5,
+    duration:1
+})
 
 
 

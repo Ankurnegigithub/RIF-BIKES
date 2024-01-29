@@ -20,23 +20,23 @@
 </head>
 <body>
  
+<div class="MainContainer">
+  <div class="mainscreen" id="MainScreen">
+    <h1 id="heading">RIF-BIKES</h1>
+   <div class="right1">
+    <h1 id="higest">100</h1>
+    <h1 id="middle">75</h1>
+    <h1 id="lower">33</h1>
+    <h1 id="lowest">00</h1>
+   </div>
+  </div>
 
   <div class="container" id="Contain1">
-    <div class="mainscreen">
-      <h1 id="heading">RIF-BIKES</h1>
-     <div class="right1">
-      <h1 id="higest">100</h1>
-      <h1 id="middle">75</h1>
-      <h1 id="lower">33</h1>
-      <h1 id="lowest">00</h1>
-     </div>
-    </div>
-  
     <div class="topnav" id="myTopnav">
-      <a onclick="window.location='#Contain1'" value="Redirect To Div" class="active" id="curse">RIF-BIKES</a>
-      <a onclick="window.location='#Main1'" value="Redirect To Div">Bikes</a>
-      <a onclick="window.location='#About1'" value="Redirect To Div">About</a>
-      <a onclick="window.location='#Contact1'" value="Redirect To Div">Contact</a>
+      <a href="#Contain1" onclick="StoS('Contain1')"  class="active" id="curse">RIF-BIKES</a>
+      <a href="#Main1" onclick="StoS('Main1')" >Bikes</a>
+      <a  href="#About1" onclick="StoS('About1')" >About</a>
+      <a  href="#Contact1" onclick="StoS('Contact1')" >Contact</a>
     
       <a  class="icon" onclick="myFunction()">
       <i class="ri-menu-5-line"></i>
@@ -79,10 +79,10 @@
 <h3>To leave the car in the garage...</h3>
 <p>Those were our first words, our first beliefs,<br> when
   we started with ebikes several years ago.<br> The same
-  Convictions still exist today, 4 years later
-  Application, only that we never imagined so many cars in<br>
+  Convictions still exist today,<br> 4 years later
+ only that we never imagined so many cars in<br>
   leaving behind so many garages.</p>
-<h4>Contact</h4>
+<h4 href="#">Contact</h4>
     </div>
     <div class="contact" id="Contact1">
      <div class="middle">
@@ -109,6 +109,8 @@ Saturday mornings by appointment
         </p>
       </div>
     </div>
+
+  </div>
   <script type="importmap">
     {
       "imports": {
@@ -121,7 +123,7 @@ Saturday mornings by appointment
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js" integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
  <script>
     function myFunction() {
     var x = document.getElementById("myTopnav");
