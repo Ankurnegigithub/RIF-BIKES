@@ -16,11 +16,7 @@
     href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
     rel="stylesheet"
 />
-   <style>
-    .mainscreen{
-      display: block !important;
-    }
-   </style>
+
 </head>
 <body>
  
@@ -37,10 +33,10 @@
 
   <div class="container" id="Contain1">
     <div class="topnav" id="myTopnav">
-      <a href="#Contain1" onclick="StoS('Contain1')"  class="active" id="curse">RIF-BIKES</a>
-      <a href="#Main1" onclick="StoS('Main1')" >Bikes</a>
-      <a  href="#About1" onclick="StoS('About1')" >About</a>
-      <a  href="#Contact1" onclick="StoS('Contact1')" >Contact</a>
+      <a href="#Contain1"   class="active" id="curse">RIF-BIKES</a>
+      <a href="#Main1" >Bikes</a>
+      <a  href="#About1"  >About</a>
+      <a  href="#Contact1"  >Contact</a>
     
       <a  class="icon" onclick="myFunction()">
       <i class="ri-menu-5-line"></i>
@@ -63,13 +59,13 @@
   </div>
     <div class="main" id="Main1">
 <div class="left">
-  <h1>E-MTB bikes</h1>
-  <h4>Game</h4>
-  <h2>from ₹3000 </h2>
-  <p>Race against time in an enduro race or<br>
+  <h1 id="Emtb">E-MTB bikes</h1>
+  <h4 id="h-4">Game</h4>
+  <h2 id="h-2">from ₹3000 </h2>
+  <p id="P-1">Race against time in an enduro race or<br>
     push yourself to the limit on rough trails, whether uphill<br>
     or downhill.</p>
-    <button>SEE DETAILS</button>
+    <button id="b-1">SEE DETAILS</button>
 </div>
 <div id="right" class="fade">
   <img src="Bike1.png" alt="404">
@@ -127,8 +123,7 @@ Saturday mornings by appointment
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js" integrity="sha512-VJ/iYbiu1eJ6yLimfTi65t2R9TFcG5D9X8ZCfbbEFhTfPnKJh8byoKXEawi5ScJZBYL1eiirL1+MczZDx0Tz9Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js" integrity="sha512-0bHMhYsdpiur1bT84kDH4D7cpxFQ9O7uA5yxVAqWC87h552Xt0swX4M+ZlXMKE8oPVRIJ5lAwXWO2UWeDwJJOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
- <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> <script>
     function myFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {

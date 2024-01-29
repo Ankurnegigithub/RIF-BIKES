@@ -144,16 +144,12 @@ function displayimages(){
     setTimeout (displayimages , 2000);
 }
 
-//SCROLL THROUGH SECTIONS
-function StoS(sectionid){
-   document.getElementById('sectionid').style.display = "block"
-}
-
-//MAIN SCREEN ON RELOAD
 
         var t1 = gsap.timeline();
  t1
     .from('#lowest',{
+        opacity:0,
+        delay:1,
     onStart:function(){
         $('#lowest').textillate({
              in: {
@@ -255,7 +251,85 @@ function StoS(sectionid){
     duration:1
 })
 
+.from('#Emtb',{
+    x:30,
+    opacity:1,
+    duration:1,
 
- //GSAP
+    scrollTrigger:{
+    trigger:"#Emtb",
+    scroller:"body",
+    markers:true,
+    start:"top 80%",
+    end:"bottom 10%",
+    
+    }
+
+})
+.from('#h-4',{
+    y:-30,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#h-4",
+    scroller:"body",
+    markers:true,
+    start:"top 80%",
+    end:"bottom 10%",
+    
+    }
+
+})
+.from('#h-2',{
+    x:30,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#h-2",
+    scroller:"body",
+    markers:true,
+    start:"top 80%",
+    end:"bottom 10%",
+    
+    }
+
+})
+.from('#P-1',{
+    y:-30,
+    opacity:1,
+
+    scrollTrigger:{
+    trigger:"#P-2",
+    scroller:"body",
+    markers:true,
+    start:"top 80%",
+    end:"bottom 10%",
+    
+    }
+
+})
+.from('#b-1',{
+    y:-30,
+    opacity:1,
+    duration:1,
+
+    scrollTrigger:{
+    trigger:"#b-1",
+    scroller:"body",
+    markers:true,
+    start:"top 80%",
+    end:"bottom 10%",
+    
+    }
+
+})
+
+
+
+
+
+ 
 
 
