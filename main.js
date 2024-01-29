@@ -10,6 +10,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
  
  init();
 
+
  function init(){
 
  scene = new THREE.Scene();
@@ -148,9 +149,9 @@ function StoS(sectionid){
    document.getElementById('sectionid').style.display = "block"
 }
 
- //GSAP
+//MAIN SCREEN ON RELOAD
 
- var t1 = gsap.timeline();
+        var t1 = gsap.timeline();
  t1
     .from('#lowest',{
     onStart:function(){
@@ -255,6 +256,6 @@ function StoS(sectionid){
 })
 
 
-
+ //GSAP
 
 

@@ -14,20 +14,20 @@ body{
   font-family: 'Rubik', sans-serif;
 }
 ::-webkit-scrollbar{
-  width: 0.1px;
+  width: 1px;
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 5px;
 }
  
-/* Handle */
+
 ::-webkit-scrollbar-thumb {
   background: rgb(0, 0, 0); 
   border-radius: 5px;
 }
 
-/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
   background: #000000; 
 }
@@ -39,9 +39,10 @@ body{
 
 
 .MainContainer .mainscreen{
+
   height: 100vh;
   width: 100%;
-  z-index: 8;
+ z-index: 5;
   position: absolute;
   background-color: black;
   color: white;
@@ -67,7 +68,7 @@ body{
 }
 
 .MainContainer .container{
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   position: relative;
  
@@ -117,7 +118,7 @@ body{
 
 
 .container #model-container{
-min-height:100vh;
+height:100vh;
 width: 100%;
 display: flex;
 align-items: center;
@@ -180,7 +181,7 @@ filter: invert(100%);
 
 
 .MainContainer .main{
-min-height: 100vh;
+height: 100vh;
 width: 100%;
 display: flex;
 align-items: center;
@@ -265,7 +266,7 @@ to { opacity:1; }
 }
 
 .MainContainer .about{
-min-height: 100vh;
+height: 100vh;
 width: 100%;
 background: url(bike4.png);
 background-position: center;
@@ -384,8 +385,6 @@ flex-direction: column;
   height: 40%;
   width: 100%;
   line-height: 1.2;
-margin: 6rem;
-padding: 6rem;
 }
  .main .left h1{
   font-size: 2.5rem;
