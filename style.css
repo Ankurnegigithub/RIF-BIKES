@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+week@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 *{
     margin: 0;
@@ -42,7 +42,7 @@ body{
 .MainContainer .mainscreen{
   height: 100vh;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
   display: block;
   position: absolute;
   background-color: black;
@@ -82,7 +82,7 @@ body{
   width: 100%;
   overflow: hidden;
   background-color: #000000;
-  z-index: 1;
+  z-index: 2;
 }
 
 .topnav a {
@@ -125,14 +125,13 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: relative;
-overflow: hidden;
+z-index:0;
 }
 
 .container #model-container .line{
 position: absolute;
     top: 15%;
     left: 5%;
-
 color: white;
 line-height: 2;
 z-index: 2;
