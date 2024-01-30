@@ -8,7 +8,328 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
  let idleTimer;
  let scene,camera,renderer,controls,enviroment,bike,loader;
  
- init();
+//GSAP
+const t1 = gsap.timeline();
+t1
+   .from('#lowest',{
+       opacity:0,
+       delay:1,
+   onStart:function(){
+       $('#lowest').textillate({
+            in: {
+                effect: 'fadeInUp',
+                callback:function() {
+                   $('#lowest').textillate('out')
+                }
+               },
+           out:{ effect:'fadeOutUp'}
+           });
+   }
+})
+
+.from('#lower',{
+   opacity:0,
+   delay:1,
+   onStart:function(){
+      
+       $('#lower').textillate({
+            in: {
+                effect: 'fadeInUp',
+                callback:function() {
+                   $('#lower').textillate('out')
+                }
+               },
+           out:{ effect:'fadeOutUp'}
+           });
+   }
+})
+.from(' #middle',{
+   opacity:0,
+   delay:1,
+   onStart:function(){
+      
+       $('#middle').textillate({
+            in: {
+                effect: 'fadeInUp',
+                callback:function() {
+                   $('#middle').textillate('out')
+                }
+               },
+           out:{ effect:'fadeOutUp'}
+           });
+   }
+})
+.from(' #higest',{
+   opacity:0,
+   delay:1,
+   onStart:function(){
+      
+       $('#higest').textillate({
+            in: {
+                effect: 'fadeInUp',
+                callback:function() {
+                   $('#higest').textillate('out')
+                }
+               },
+           out:{ effect:'fadeOutUp'}
+           });
+   }
+})
+.from(' #heading',{
+   opacity:0,
+   y:-30,
+   duration:1
+
+})
+.to('.mainscreen',{
+   top:'-100%',
+   delay:1,
+   duration:1.2,
+   ease:"Power4.easeOut"
+})
+
+
+.from('.topnav',{
+   opacity:0,
+  y:20,
+   duration:1
+})
+.from('#Head',{
+   opacity:0,
+   x:-20,
+  duration:0.5
+})
+.from('.up',{
+   opacity:0,
+   x:-30,
+   duration:0.5
+})
+.from('#tog',{
+   opacity:0,
+   y:-20,
+   duration:0.5
+})
+.from('#model-container img',{
+   opacity:0,
+   scale:1.5,
+   duration:1
+})
+
+.to('#Emtb',{
+   x:10,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#Emtb",
+   scroller:"body",
+ 
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#h-4',{
+   x:-10,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#h-4",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#h-2',{
+   x:10,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#h-2",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#P-1',{
+   x:-30,
+   opacity:1,
+
+   scrollTrigger:{
+   trigger:"#P-1",
+   scroller:"body",
+ 
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#b-1',{
+   y:30,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#b-1",
+   scroller:"body",
+   
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('#right',{
+   scale:1.2,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#right",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('#H',{
+   x:-40,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#H",
+   scroller:"body",
+ 
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('#h-3',{
+   x:40,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#h-3",
+   scroller:"body",
+ 
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#p-2',{
+   y:30,
+   opacity:1,
+   duration:0.5,
+
+   scrollTrigger:{
+   trigger:"#p-2",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#h4',{
+   y:50,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#h4",
+   scroller:"body",
+   
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('.H-2',{
+   x:-40,
+   opacity:1,
+   duration:2,
+
+   scrollTrigger:{
+   trigger:".H-2",
+   scroller:"body",
+   
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('.H-1',{
+   x:40,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:".H-1",
+   scroller:"body",
+
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+.to('#svgs',{
+   x:30,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:"#svgs",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
+
+.to('.PP',{
+   y:50,
+   opacity:1,
+   duration:1,
+
+   scrollTrigger:{
+   trigger:".PP",
+   scroller:"body",
+  
+   start:"top 80%",
+   end:"bottom 10%",
+   scrub:2
+   }
+
+})
 
 
  function init(){
@@ -60,6 +381,9 @@ render();
 } );
 
  };
+
+ init();
+
 //LIGHT SOURCES
 const ambientLight = new THREE.AmbientLight(0xffffff,0.5);
 scene.add(ambientLight);
@@ -105,6 +429,7 @@ controls.update();
 renderer.render(scene,camera);
 };
 
+animate();
 
 //RESPONSIVE
 window.addEventListener('resize', ()=>{
@@ -115,9 +440,6 @@ window.addEventListener('resize', ()=>{
 	
 	});
 
-	animate();
-
-
     function render() {
         renderer.render( scene, camera );
     }
@@ -125,7 +447,7 @@ window.addEventListener('resize', ()=>{
 	
 
 //DISPLAY IMAGES
-  displayimages();
+
  
 function displayimages(){
     let i;
@@ -144,331 +466,7 @@ function displayimages(){
     setTimeout (displayimages , 2000);
 }
 
-
-//GSAP
-        const t1 = gsap.timeline();
- t1
-    .from('#lowest',{
-        opacity:0,
-        delay:1,
-    onStart:function(){
-        $('#lowest').textillate({
-             in: {
-                 effect: 'fadeInUp',
-                 callback:function() {
-                    $('#lowest').textillate('out')
-                 }
-                },
-            out:{ effect:'fadeOutUp'}
-            });
-    }
-})
-
-.from('#lower',{
-    opacity:0,
-    delay:1,
-    onStart:function(){
-       
-        $('#lower').textillate({
-             in: {
-                 effect: 'fadeInUp',
-                 callback:function() {
-                    $('#lower').textillate('out')
-                 }
-                },
-            out:{ effect:'fadeOutUp'}
-            });
-    }
-})
-.from(' #middle',{
-    opacity:0,
-    delay:1,
-    onStart:function(){
-       
-        $('#middle').textillate({
-             in: {
-                 effect: 'fadeInUp',
-                 callback:function() {
-                    $('#middle').textillate('out')
-                 }
-                },
-            out:{ effect:'fadeOutUp'}
-            });
-    }
-})
-.from(' #higest',{
-    opacity:0,
-    delay:1,
-    onStart:function(){
-       
-        $('#higest').textillate({
-             in: {
-                 effect: 'fadeInUp',
-                 callback:function() {
-                    $('#higest').textillate('out')
-                 }
-                },
-            out:{ effect:'fadeOutUp'}
-            });
-    }
-})
-.from(' #heading',{
-    opacity:0,
-    y:-30,
-    duration:1
-
-})
-.to('.mainscreen',{
-    top:'-100%',
-    delay:1,
-    duration:1.2,
-    ease:"Power4.easeOut"
-})
-
-
-.from('.topnav',{
-    opacity:0,
-   y:20,
-    duration:1
-})
-.from('#Head',{
-    opacity:0,
-    x:-20,
-   duration:0.5
-})
-.from('.up',{
-    opacity:0,
-    x:-30,
-    duration:0.5
-})
-.from('#tog',{
-    opacity:0,
-    y:-20,
-    duration:0.5
-})
-.from('#model-container img',{
-    opacity:0,
-    scale:1.5,
-    duration:1
-})
-
-.to('#Emtb',{
-    x:30,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#Emtb",
-    scroller:"body",
-  
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#h-4',{
-    y:-40,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#h-4",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#h-2',{
-    x:30,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#h-2",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#P-1',{
-    y:-30,
-    opacity:1,
-
-    scrollTrigger:{
-    trigger:"#P-2",
-    scroller:"body",
-  
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#b-1',{
-    y:-30,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#b-1",
-    scroller:"body",
-    
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('#right',{
-    scale:1.2,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#right",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('#H',{
-    x:-40,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#H",
-    scroller:"body",
-  
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('#h-3',{
-    x:40,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#H",
-    scroller:"body",
-  
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#p-2',{
-    y:30,
-    opacity:1,
-    duration:0.5,
-
-    scrollTrigger:{
-    trigger:"#p-2",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#h4',{
-    y:50,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#h4",
-    scroller:"body",
-    
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('.H-2',{
-    x:-40,
-    opacity:1,
-    duration:2,
-
-    scrollTrigger:{
-    trigger:".H-2",
-    scroller:"body",
-    
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('.H-1',{
-    x:40,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:".H-1",
-    scroller:"body",
-
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-.to('#svgs',{
-    x:30,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:"#svgs",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-.to('.PP',{
-    y:50,
-    opacity:1,
-    duration:1,
-
-    scrollTrigger:{
-    trigger:".PP",
-    scroller:"body",
-   
-    start:"top 80%",
-    end:"bottom 10%",
-    scrub:2
-    }
-
-})
-
-
+displayimages();
  
 
 
