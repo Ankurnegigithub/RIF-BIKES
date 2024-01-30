@@ -125,7 +125,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 position: relative;
-z-index:0;
+    overflow:hidden;
 }
 
 .container #model-container .line{
@@ -361,7 +361,7 @@ width: 20px;
 /* MEDIA QUERIES */
 
 @media (max-width: 720px) {
-  .container #model-container .line{
+ .MainContainer .container #model-container .line{
     line-height: 1.2;
   }
   .container #model-container .line h1{
@@ -376,20 +376,26 @@ font-weight: 700;
     width: 100px;
   }
 
- .main{
-  min-height: 100vh;
+.MainContainer.main{
+  height: 100vh;
 flex-direction: column;
 }
 
  .main .left{
   height: 40%;
   width: 100%;
-  line-height: 1.2;
+  line-height: 1;
 }
  .main .left h1{
   font-size: 2.5rem;
 
 }
+   .main .left h2{
+       font-size:1.5;
+   }
+    .main  .left h4{
+        font-size:1.5;
+    }
 .main .left p{
   font-size: 1.5rem;
 }
@@ -398,13 +404,13 @@ flex-direction: column;
   height: 60%;
 }
  .main #right img{
-  height: 27%;
+  height: 100%%;
   width: 100%;
   
  
 }
 
- .about{
+.MainContainer.about{
   line-height: 1.2;
 }
  .about h1{
@@ -425,7 +431,7 @@ flex-direction: column;
   font-weight: 400;
   }
 
-  .contact .middle{
+ .MainContainer .contact .middle{
     line-height: 1;
   }
    .contact .middle h1{
@@ -445,7 +451,7 @@ flex-direction: column;
 
 
 @media (max-width: 500px){
-   .main .left h1{
+  .MainContainer.main .left h1{
     font-size: 2rem;
   }
   .main .left h1{
@@ -455,7 +461,7 @@ flex-direction: column;
     font-size: 1rem;
   }
 
-  .about h1{
+ .MainContainer .about h1{
     font-size: 2rem;
     font-weight: 800;
     
@@ -472,7 +478,7 @@ flex-direction: column;
     font-size: 2rem;
     font-weight: 400;
     }
-    .contact .middle h1{
+   .MainContainer.contact .middle h1{
       font-size: 2rem;
       font-weight: 800;
     }
