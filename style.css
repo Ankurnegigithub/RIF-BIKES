@@ -134,7 +134,7 @@ position: absolute;
     left: 5%;
 color: white;
 line-height: 2;
-z-index: 2;
+z-index: 3;
 }
 
 .container #model-container .line h1{
