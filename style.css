@@ -186,7 +186,7 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-background: url(Background1.png);
+background: url(./Images/Background1.png);
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -268,7 +268,7 @@ to { opacity:1; }
 .MainContainer .about{
 height: 100vh;
 width: 100%;
-background: url(bike4.png);
+background: url(./Images/bike4.png);
 background-position: center;
 background-repeat: no-repeat;
 background-color: black;
@@ -320,7 +320,7 @@ flex-direction: column;
 align-items: center;
 text-align: center;
 line-height: 1.2;
-background: url(bike3.png)  no-repeat;
+background: url(./Images/bike3.png)  no-repeat;
 background-size: cover;
 background-position: center;
 } 

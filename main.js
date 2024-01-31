@@ -354,12 +354,12 @@ document.querySelector('#model-container').append( renderer.domElement );
 
 //BACKGROUND TEXTURES
 const cubeTextures =[
-	'px.jpg',
-	'nx.jpg',
-	'py.jpg',
-	'ny.jpg',
-	'pz.jpg',
-	'nz.jpg'
+	'./Images/px.jpg',
+	'./Images/nx.jpg',
+	'./Images/py.jpg',
+	'./Images/ny.jpg',
+	'./Images/pz.jpg',
+	'./Images/nz.jpg'
 ]
 
  enviroment = new THREE.CubeTextureLoader().load(cubeTextures);
